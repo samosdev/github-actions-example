@@ -1,5 +1,5 @@
 FROM golang:alpine as build-env
-
+RUN apk add --update git
 ADD . /app
 WORKDIR /app
 RUN go build -o hello
